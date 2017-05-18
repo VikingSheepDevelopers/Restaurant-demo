@@ -1,6 +1,10 @@
 export class Customer{
 	constructor(
-		public title:string,  
-		public customers:Array<{name:string,lastname:string,dni:string,email:string,phone:string,address:string}>
+		public name:string,
+		public lastname:string, 
+		public dni:string, 
+		public email:string, 
+		public phone:string, 
+		public address:string,   
 	){}
 }
