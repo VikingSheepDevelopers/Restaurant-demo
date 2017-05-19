@@ -10,6 +10,7 @@ import {CustomerService} from '../services/customer.service';
 })
 export class MyCustomerAddComponent implements OnInit {
  	public title:string;
+  public id:number;
  	public customer:Customer;
   public customers:Array<{name: string,lastname:string, dni: string, email:string,phone:string,address:string}>;
   
@@ -18,7 +19,8 @@ export class MyCustomerAddComponent implements OnInit {
    }
 
   ngOnInit() {
-  	this.customer=new Customer("","","","","","");
+    this.id=this.customers.length+1;
+  	this.customer=new Customer(this.id,"","","","","","");
   	console.log(this.customer);
   }
 
