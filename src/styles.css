@@ -1,1 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	padding: 0px !important;
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.form-group .btn-action{
+	width:100%;
+	padding: 8px 12px 7px 12px;
+}
+
+.btn-action {
+    background-color: #2196F3;
+    color: #ffffff;
+    border-color: #2196F3; 
+    transition: 0.3s;
+}
+.btn-action:hover, .btn-action:focus, .btn-action:active, .btn-action.active, .open .dropdown-toggle.btn-action {
+  color:#2196F3;
+  background-color: #ffffff;
+  border-color: #2196F3;
+}
+
+.btn-add-cart {
+  padding: 14px 28px !important;
+  border-radius: 0px !important;
+}
+
+
+  .f8em {
+	font-size: 0.500em !important;
+}
+  .f9em {
+	font-size: 0.563em !important;
+}
+  .f10em {
+	font-size: 0.625em !important;
+}
+  .f11em {
+	font-size: 0.688em !important;
+}
+ .f12em {
+	font-size: 0.750em !important;
+}
+ .f13em {
+	font-size: 0.813em !important;
+}
+ .f14em {
+	font-size: 0.875em !important;
+}
+ .f15em {
+	font-size: 0.938em !important;
+}
+ .f16em {
+	font-size: 1em !important;
+}
+ .f17em {
+	font-size: 1.063em !important;
+}
+ .f18em {
+	font-size: 1.125em  !important;
+}
+ .f19em {
+	font-size: 1.188em !important;
+}
+ .f20em {
+	font-size: 1.250em !important;
+}
+ .f22em {
+	font-size: 1.375em !important;
+}
+.f24em {
+	font-size: 1.5em !important;
+}
+.f25em {
+	font-size: 1.563em !important;
+}
+.f26em {
+	font-size: 1.625em !important;
+}
+.f28em {
+  font-size: 1.750em !important;
+}
+.f30em {
+	font-size: 1.875em !important;
+}
+.f35em {
+	font-size: 2.188em !important;
+}
+ .f40em {
+	font-size: 2.500em !important;
+}
+ .f50em {
+	font-size: 3.125em !important;
+}
+.f100em {
+	font-size: 6.250em !important;
+}
+.f120em {
+	font-size: 7.500em !important;
+}
+
+.head-card{
+	background-color: #80dfff;
+	padding: 20px;
+}
+
+.head-card h2{
+	margin:0px !important;
+	color: #fff;
+}
+
+.body-card{
+	padding: 20px;
+}
