@@ -20,4 +20,9 @@ public customers:Array<{name: string,lastname:string, dni: string, email:string,
   	
   }
 
+  OnDelete(id){
+    this._customerService.deleteCustomer(id);
+    this.customers=this._customerService.getCustomers();
+  }
+
 }
