@@ -11,6 +11,7 @@
 					<th>Correo</th>
 					<th>Telefono</th>
 					<th>Direccion</th>
+					<th>acciones</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -20,6 +21,7 @@
 					<td>{{customer.email}}</td>
 					<td>{{customer.phone}}</td>
 					<td>{{customer.address}}</td>
+					<td><button class="btn btn-danger" (click)="OnDelete(customer.id)">Borrar</button></td>
 				</tr>
 			</tbody>
 		</table>

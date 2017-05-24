@@ -20,6 +20,16 @@ export class CustomerService extends Init{
 		localStorage.setItem('customers',JSON.stringify(customers));
 	}
 
+	deleteCustomer(id){
+		var customers=JSON.parse(localStorage.getItem('customers'));
+		for(var customer in customers){
+			if(customers[customer].id==id){
+				customers.splice(customer,1);
+			}
+		}
+		localStorage.setItem('customers',JSON.stringify(customers));
+	}
+
 	viewCustomer(id){
 		var mycustomer;
 		var customers=JSON.parse(localStorage.getItem('customers'));
