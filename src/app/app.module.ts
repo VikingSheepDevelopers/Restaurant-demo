@@ -13,6 +13,7 @@ import { MyCustomerComponent } from './my-customer-component/my-customer-compone
 import { MyCustomerAddComponent } from './my-customer-add/my-customer-add.component';
 import { MyCustomerEditComponent } from './my-customer-edit/my-customer-edit.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     MyCustomerComponent,
     MyCustomerAddComponent,
     MyCustomerEditComponent,
-    NavbarComponent
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

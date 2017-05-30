@@ -1,29 +1,28 @@
-<div class="container">
-	<div class="row">
-		<h2>
-		  {{title}}
-		</h2>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Nombre y Apellido</th>
-					<th>Dni</th>
-					<th>Correo</th>
-					<th>Telefono</th>
-					<th>Direccion</th>
-					<th>acciones</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let customer of customers;">
-					<td>{{customer.name+" "+customer.lastname}}</td>
-					<td>{{customer.dni}}</td>
-					<td>{{customer.email}}</td>
-					<td>{{customer.phone}}</td>
-					<td>{{customer.address}}</td>
-					<td><button class="btn btn-danger" (click)="OnDelete(customer.id)">Borrar</button></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
+<h2 class="title f50em">
+  {{title}}
+</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nombre y Apellido</th>
+			<th>Dni</th>
+			<th>Correo</th>
+			<th>Telefono</th>
+			<th>Direccion</th>
+			<th>acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let customer of customers;">
+			<td>{{customer.name+" "+customer.lastname}}</td>
+			<td>{{customer.dni}}</td>
+			<td>{{customer.email}}</td>
+			<td>{{customer.phone}}</td>
+			<td>{{customer.address}}</td>
+			<td>
+				<button class="btn btn-info"  (click)="OnDelete(customer.id)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+				<button class="btn btn-danger" (click)="OnDelete(customer.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			</td>
+		</tr>
+	</tbody>
+</table>
