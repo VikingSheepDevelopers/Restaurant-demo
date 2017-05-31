@@ -36,6 +36,7 @@ export class MyCustomerEditComponent implements OnInit {
 	public onSubmit()
 	{	
 	    this._customerService.editCustomer(this.customer);
+	    this._router.navigate(['/']);
 	}
 
 }

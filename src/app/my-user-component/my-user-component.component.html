@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="row">
+		<h2>
+		  {{title}}
+		</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Nombre y Apellido</th>
+					<th>Dni</th>
+					<th>Correo</th>
+					<th>Telefono</th>
+					<th>Direccion</th>
+					<th>Nombre en el Sistema</th>
+					<th>Papel que desempeña</th>
+					<th>acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let user of users;">
+					<td>{{user.name+" "+user.lastname}}</td>
+					<td>{{user.dni}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.phone}}</td>
+					<td>{{user.address}}</td>
+					<td>{{user.username}}</td>
+					<td>{{user.role}}</td>
+					<td><button class="btn btn-danger" (click)="OnDelete(user.id)">Borrar</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

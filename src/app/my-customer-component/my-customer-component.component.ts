@@ -9,7 +9,7 @@ import {CustomerService} from '../services/customer.service';
 })
 export class MyCustomerComponent implements OnInit {
 public title:string;
-public customers:Array<{name: string,lastname:string, dni: string, email:string,phone:string,address:string}>;
+public customers:Customer;
   constructor(private _customerService:CustomerService) 
   { 
   	this.title="Lista de Clientes"
