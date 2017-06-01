@@ -15,6 +15,8 @@ import { MyCustomerEditComponent } from './my-customer-edit/my-customer-edit.com
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { MyUserComponent } from './my-user-component/my-user-component.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { MyUserAddComponent } from './my-user-add/my-user-add.component';
+import { MyUserEditComponent } from './my-user-edit/my-user-edit.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
     MyCustomerEditComponent,
     NavbarComponent,
     MyUserComponent,
-    SidebarComponent
+    SidebarComponent,
+    MyUserAddComponent,
+    MyUserEditComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ export class User{
 		public dni:string, 
 		public email:string, 
 		public phone:string, 
-		public bithday:string, 
+		public birthday:string, 
 		public address:string,
 		public role:string,
 		public username:string,
