@@ -1,0 +1,24 @@
+<h2 class="title f50em">
+  {{title}}
+</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Precio por Kg</th>
+			<th>Existencia en inventario</th>
+			<th>acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let ingredient of ingredients;">
+			<td>{{ingredient.name}}</td>
+			<td>{{ingredient.price_x_kg}}</td>
+			<td>{{ingredient.existence}}</td>
+			<td>
+				<a type="button" class="btn btn-info" href="/ingredientEdit/{{ingredient.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+				<button class="btn btn-danger" (click)="OnDelete(ingredient.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			</td>
+		</tr>
+	</tbody>
+</table>

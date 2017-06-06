@@ -1,0 +1,20 @@
+<div class="container">
+	<h2>
+		Editar Ingrediente!!
+	</h2>
+	<form #formIngredient="ngForm" (ngSubmit)="onSubmit()">
+		<div class="form-group">
+			<label>Nombre</label>
+			<input type="text" name="name" class="form-control" #name="ngModel" [(ngModel)]="ingredient.name"/>
+		</div>
+		<div class="form-group">
+			<label>Precio por Kg</label>
+			<input type="number" name="price_x_kg" class="form-control" #lastname="ngModel" [(ngModel)]="ingredient.price_x_kg"/>
+		</div>
+		<div class="form-group">
+			<label>Existencia</label>
+			<input type="number" name="existence" class="form-control" #dni="ngModel" [(ngModel)]="ingredient.existence"/>
+		</div>
+		<input class="btn btn-success pull-right" type="submit" value="Actualizar">
+	</form>
+</div>

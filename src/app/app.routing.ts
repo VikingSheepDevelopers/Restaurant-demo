@@ -7,6 +7,10 @@ import {MyCustomerEditComponent} from './my-customer-edit/my-customer-edit.compo
 import {MyUserComponent} from './my-user-component/my-user-component.component';
 import {MyUserAddComponent} from './my-user-add/my-user-add.component';
 import {MyUserEditComponent} from './my-user-edit/my-user-edit.component';
+import {MyIngredientComponent} from './my-ingredient-component/my-ingredient-component.component';
+import {MyIngredientAddComponent} from './my-ingredient-add/my-ingredient-add.component';
+import {MyIngredientEditComponent} from './my-ingredient-edit/my-ingredient-edit.component';
+
 
 const appRoutes: Routes=[
 	{path:'',component:MyCustomerComponent},
@@ -15,8 +19,10 @@ const appRoutes: Routes=[
 	{path:'listUsers',component:MyUserComponent},
 	{path:'userCreate',component:MyUserAddComponent},
 	{path:'userEdit/:id',component:MyUserEditComponent},
+	{path:'listIngredients',component:MyIngredientComponent},
+	{path:'ingredientCreate',component:MyIngredientAddComponent},
+	{path:'ingredientEdit/:id',component:MyIngredientEditComponent},
 	{path:'**',component:MyCustomerComponent}
-	
 ];
 
 export const appRoutingProviders:any[]=[];

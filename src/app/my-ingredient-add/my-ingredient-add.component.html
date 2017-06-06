@@ -1,0 +1,26 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 card ">
+			<div class="head-card">
+				<h2>Registra un nuevo ingrediente</h2>				
+			</div>
+			<div class="body-card">
+				<form #formIngredient="ngForm" (ngSubmit)="onSubmit()">
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" name="name" class="form-control" #name="ngModel" [(ngModel)]="ingredient.name"/>
+					</div>
+					<div class="form-group">
+						<label>Precio por Kg</label>
+						<input type="number" name="price_x_kg" class="form-control" #price_x_kg="ngModel" [(ngModel)]="ingredient.price_x_kg"/>
+					</div>
+					<div class="form-group">
+						<label>Existencia en inventario</label>
+						<input type="number" name="existence" class="form-control" #existence="ngModel" [(ngModel)]="ingredient.existence"/>
+					</div>
+					<button type="submit" class="btn btn-success btn-add-cart pull-right f20em">AGREGAR	<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+				</form>				
+			</div>
+		</div>
+	</div>
+</div>
