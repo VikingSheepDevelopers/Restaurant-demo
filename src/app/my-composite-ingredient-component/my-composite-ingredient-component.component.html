@@ -1,0 +1,24 @@
+<h2 class="title f50em">
+  {{title}}
+</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>categoria</th>
+			<th>acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let ci of compositeIngredients;">
+			<td>{{ci.name}}</td>
+			<div *ngFor="let category of categorys;">
+				<td *ngIf="category.id==ci.category_id">{{category.name}}</td>
+			</div>
+			<td>
+				<a type="button" class="btn btn-info" href="/ingredientEdit/{{ci.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+				<button class="btn btn-danger" (click)="OnDelete(ci.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			</td>
+		</tr>
+	</tbody>
+</table>

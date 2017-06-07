@@ -12,7 +12,7 @@ public title:string;
 public ingredients:Ingredient;
   constructor(private _ingredientService:IngredientService) 
   { 
-  	this.title="Ingredientes es Inventario"
+  	this.title="Ingredientes en Inventario"
   	this.ingredients=this._ingredientService.getIngredients();
   }
 

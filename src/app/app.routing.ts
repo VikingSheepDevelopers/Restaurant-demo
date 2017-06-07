@@ -10,6 +10,7 @@ import {MyUserEditComponent} from './my-user-edit/my-user-edit.component';
 import {MyIngredientComponent} from './my-ingredient-component/my-ingredient-component.component';
 import {MyIngredientAddComponent} from './my-ingredient-add/my-ingredient-add.component';
 import {MyIngredientEditComponent} from './my-ingredient-edit/my-ingredient-edit.component';
+import {MyCompositeIngredientComponent} from './my-composite-ingredient-component/my-composite-ingredient-component.component';
 
 
 const appRoutes: Routes=[
@@ -22,6 +23,7 @@ const appRoutes: Routes=[
 	{path:'listIngredients',component:MyIngredientComponent},
 	{path:'ingredientCreate',component:MyIngredientAddComponent},
 	{path:'ingredientEdit/:id',component:MyIngredientEditComponent},
+	{path:'listCompositeIngredients',component:MyCompositeIngredientComponent},
 	{path:'**',component:MyCustomerComponent}
 ];
 

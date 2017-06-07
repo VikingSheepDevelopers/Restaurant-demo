@@ -20,6 +20,8 @@ import { MyUserEditComponent } from './my-user-edit/my-user-edit.component';
 import { MyIngredientComponent } from './my-ingredient-component/my-ingredient-component.component';
 import { MyIngredientAddComponent } from './my-ingredient-add/my-ingredient-add.component';
 import { MyIngredientEditComponent } from './my-ingredient-edit/my-ingredient-edit.component';
+import { MyCategoryComponent } from './my-category/my-category.component';
+import { MyCompositeIngredientComponent } from './my-composite-ingredient-component/my-composite-ingredient-component.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { MyIngredientEditComponent } from './my-ingredient-edit/my-ingredient-ed
     MyUserEditComponent,
     MyIngredientComponent,
     MyIngredientAddComponent,
-    MyIngredientEditComponent
+    MyIngredientEditComponent,
+    MyCategoryComponent,
+    MyCompositeIngredientComponent
   ],
   imports: [
     BrowserModule,
