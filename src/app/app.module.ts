@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 import { LocalStorageModule } from 'angular-2-local-storage';
 import { routing, appRoutingProviders } from './app.routing';
 import { RouterModule, Routes } from '@angular/router';
-
+import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import 'hammerjs';
 
 
 import { AppComponent } from './app.component';
@@ -41,6 +43,8 @@ import { MyIngredientEditComponent } from './my-ingredient-edit/my-ingredient-ed
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterialModule,
+    BrowserAnimationsModule,
     routing,
     LocalStorageModule.withConfig({
             prefix: 'my-restaurant',
