@@ -6,6 +6,9 @@ import { LocalStorageModule } from 'angular-2-local-storage';
 import { routing, appRoutingProviders } from './app.routing';
 import { RouterModule, Routes } from '@angular/router';
 import { Select2Module } from 'ng2-select2';
+import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import 'hammerjs';
 
 
 
@@ -50,6 +53,8 @@ import { MyCompositeIngredientAddComponent } from './my-composite-ingredient-add
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterialModule,
+    BrowserAnimationsModule,
     routing,
     Select2Module,
     LocalStorageModule.withConfig({
