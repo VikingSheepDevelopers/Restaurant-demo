@@ -1,0 +1,36 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 card ">
+			<div class="head-card">
+				<h2>Nuevo Ingrediente Compuesto</h2>				
+			</div>
+			<div class="body-card">
+				<form #formCompositeIngredient="ngForm" (ngSubmit)="onSubmit()">
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" name="name" class="form-control" #name="ngModel" [(ngModel)]="compositeIngredient.name"/>
+					</div>
+					 <div class="form-group">
+						<label>Categoria que representa</label>
+						<select name="category_id" class="form-control" #category_id="ngModel" [(ngModel)]="compositeIngredient.category_id">
+							<option *ngFor="let category of categorys;" [value]=category.id>{{category.name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Ingredientes</label>
+						<select name="ingredients" class="form-control" multiple="multiple" #ingredients="ngModel" [(ngModel)]="compositeIngredient.ingredients">
+							<option *ngFor="let ingredient of ingredients2;" value="{{ingredient.id}}">{{ingredient.name}}</option>
+						</select>
+					</div> 
+					<!-- <div class="form-group">
+						<label>Ingredientes</label>
+						<select name="ingredientes" class="form-control select2" multiple="multiple">
+							<option *ngFor="let ingredient of ingredients2;" value="{{ingredient.id}}">{{ingredient.name}}</option>
+						</select>
+					</div>  -->
+					<button type="submit" class="btn btn-success btn-add-cart pull-right f20em">REGISTRAR!	<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+				</form>				
+			</div>
+		</div>
+	</div>
+</div>

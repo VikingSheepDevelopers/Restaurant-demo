@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { LocalStorageModule } from 'angular-2-local-storage';
 import { routing, appRoutingProviders } from './app.routing';
 import { RouterModule, Routes } from '@angular/router';
+import { Select2Module } from 'ng2-select2';
 
 
 
@@ -22,6 +23,8 @@ import { MyIngredientAddComponent } from './my-ingredient-add/my-ingredient-add.
 import { MyIngredientEditComponent } from './my-ingredient-edit/my-ingredient-edit.component';
 import { MyCategoryComponent } from './my-category/my-category.component';
 import { MyCompositeIngredientComponent } from './my-composite-ingredient-component/my-composite-ingredient-component.component';
+import { MyCategoryAddComponent } from './my-category-add/my-category-add.component';
+import { MyCompositeIngredientAddComponent } from './my-composite-ingredient-add/my-composite-ingredient-add.component';
 
 
 @NgModule({
@@ -39,13 +42,16 @@ import { MyCompositeIngredientComponent } from './my-composite-ingredient-compon
     MyIngredientAddComponent,
     MyIngredientEditComponent,
     MyCategoryComponent,
-    MyCompositeIngredientComponent
+    MyCompositeIngredientComponent,
+    MyCategoryAddComponent,
+    MyCompositeIngredientAddComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
+    Select2Module,
     LocalStorageModule.withConfig({
             prefix: 'my-restaurant',
             storageType: 'localStorage'

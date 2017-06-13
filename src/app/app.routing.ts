@@ -11,6 +11,9 @@ import {MyIngredientComponent} from './my-ingredient-component/my-ingredient-com
 import {MyIngredientAddComponent} from './my-ingredient-add/my-ingredient-add.component';
 import {MyIngredientEditComponent} from './my-ingredient-edit/my-ingredient-edit.component';
 import {MyCompositeIngredientComponent} from './my-composite-ingredient-component/my-composite-ingredient-component.component';
+import {MyCompositeIngredientAddComponent} from './my-composite-ingredient-add/my-composite-ingredient-add.component';
+import {MyCategoryComponent} from './my-category/my-category.component';
+import {MyCategoryAddComponent} from './my-category-add/my-category-add.component';
 
 
 const appRoutes: Routes=[
@@ -24,6 +27,9 @@ const appRoutes: Routes=[
 	{path:'ingredientCreate',component:MyIngredientAddComponent},
 	{path:'ingredientEdit/:id',component:MyIngredientEditComponent},
 	{path:'listCompositeIngredients',component:MyCompositeIngredientComponent},
+	{path:'compositeIngredientsCreate',component:MyCompositeIngredientAddComponent},
+	{path:'listCategory',component:MyCategoryComponent},
+	{path:'categoryCreate',component:MyCategoryAddComponent},
 	{path:'**',component:MyCustomerComponent}
 ];
 

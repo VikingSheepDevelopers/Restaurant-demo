@@ -12,9 +12,7 @@
 	<tbody>
 		<tr *ngFor="let ci of compositeIngredients;">
 			<td>{{ci.name}}</td>
-			<div *ngFor="let category of categorys;">
-				<td *ngIf="category.id==ci.category_id">{{category.name}}</td>
-			</div>
+			<td><div *ngFor="let category of categorys;"><div *ngIf="category.id==ci.category_id">{{category.name}}</div></div></td>
 			<td>
 				<a type="button" class="btn btn-info" href="/ingredientEdit/{{ci.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 				<button class="btn btn-danger" (click)="OnDelete(ci.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
