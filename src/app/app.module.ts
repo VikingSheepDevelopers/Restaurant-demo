@@ -28,6 +28,8 @@ import { MyCategoryComponent } from './my-category/my-category.component';
 import { MyCompositeIngredientComponent } from './my-composite-ingredient-component/my-composite-ingredient-component.component';
 import { MyCategoryAddComponent } from './my-category-add/my-category-add.component';
 import { MyCompositeIngredientAddComponent } from './my-composite-ingredient-add/my-composite-ingredient-add.component';
+import { MyFoodComponentComponent } from './my-food-component/my-food-component.component';
+import { MyIngredientXCompositeAddComponent } from './my-ingredient-x-composite-add/my-ingredient-x-composite-add.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { MyCompositeIngredientAddComponent } from './my-composite-ingredient-add
     MyCategoryComponent,
     MyCompositeIngredientComponent,
     MyCategoryAddComponent,
-    MyCompositeIngredientAddComponent
+    MyCompositeIngredientAddComponent,
+    MyFoodComponentComponent,
+    MyIngredientXCompositeAddComponent
   ],
   imports: [
     BrowserModule,

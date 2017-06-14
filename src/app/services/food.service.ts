@@ -46,7 +46,7 @@ export class CompositeIngredientService extends Init{
 		for(var ci of compositeIngredients){
 			if(ci.id==changeCompositeIngredient.id){
 				ci.name=changeCompositeIngredient.name;
-				ci.price_x_kg=changeCompositeIngredient.ingredient_x_composite;
+				ci.price_x_kg=changeCompositeIngredient.ingredients;
 				ci.existence=changeCompositeIngredient.cattegory_id;
 			}
 		}
