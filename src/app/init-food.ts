@@ -4,13 +4,14 @@ export class Init{
 		if(localStorage.getItem('foods')===null || localStorage.getItem('foods')===undefined){
 			var foods=[
 				{
-					id:1,name: "pasta boloñesa",
-					ingredients:[1,2],
-					compositeIngredients:[1,2], 
+					id:1,
+					name: "pasta a la boloñesa",
+					ingredients_x_composite:[1,2],
+					compsite_x_food:[1,2], 
 					category_id: 1,
 					price_f:9,
 					price_s:17,
-					img_name:"spa_parailustrar_copia.jpg",
+					img_name:"assets/img/spaparailustra.jpg",
 					descrip:"una muy buena pasta a la boloñesa"
 				}
 			];
