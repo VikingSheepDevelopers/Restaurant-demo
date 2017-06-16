@@ -3,7 +3,7 @@ export class Food{
 		public id:number,
 		public name:string,
 		public ingredient_x_composite:Array<any>,
-		public compsite_x_food:Array<any>,  
+		public composite_x_food:Array<any>,  
 		public category_id:number,
 		public price_f:number,
 		public price_s:number,

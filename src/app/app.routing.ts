@@ -15,6 +15,7 @@ import {MyCompositeIngredientAddComponent} from './my-composite-ingredient-add/m
 import {MyCategoryComponent} from './my-category/my-category.component';
 import {MyCategoryAddComponent} from './my-category-add/my-category-add.component';
 import {MyFoodComponent} from './my-food-component/my-food-component.component';
+import {MyFoodAddComponent} from './my-food-add/my-food-add.component';
 
 
 const appRoutes: Routes=[
@@ -32,6 +33,7 @@ const appRoutes: Routes=[
 	{path:'listCategory',component:MyCategoryComponent},
 	{path:'categoryCreate',component:MyCategoryAddComponent},
 	{path:'listFoods',component:MyFoodComponent},
+	{path:'foodCreate',component:MyFoodAddComponent},
 	{path:'assets/**',redirectTo:'assets/**'},
 	{path:'**',component:MyCustomerComponent}
 ];

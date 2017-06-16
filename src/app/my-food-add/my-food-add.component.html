@@ -1,0 +1,94 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 card ">
+			<div class="head-card">
+				<h2>Nuevo Ingrediente Compuesto</h2>				
+			</div>
+			<div class="body-card">
+				<form #formFood="ngForm" (ngSubmit)="onSubmit()">
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" name="name" class="form-control" #name="ngModel" [(ngModel)]="food.name"/>
+					</div>
+					 <div class="form-group">
+						<label>Categoria que representa</label>
+						<select name="category_id" class="form-control" #category_id="ngModel" [(ngModel)]="food.category_id">
+							<option *ngFor="let category of categorys;" [value]=category.id>{{category.name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Descripcion</label>
+						<input type="text" name="descrip" class="form-control" #descrip="ngModel" [(ngModel)]="food.descrip"/>
+					</div>
+					<div class="form-group">
+						<label>Ingredientes</label>
+						<select name="ingredient_id" class="form-control" #ingredient_id="ngModel" [(ngModel)]="IngredientXComposite.ingredient_id">
+							<option *ngFor="let ingredient of ingredients2;" value="{{ingredient.id}}">{{ingredient.name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Gramo</label>
+						<input type="text" name="gramo" class="form-control" #gramo="ngModel" [(ngModel)]="IngredientXComposite.gramo"/>
+					</div>
+					<div  class="row">
+						<button type="button" class="btn btn-success btn-add-cart pull-right f20em" (click)="addIngredients()">Agregar!	<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+						</div>
+					<br>
+					<br>
+					<div *ngIf="ingredientXComposites.length>0">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>ingrediente</th>
+									<th>gramos</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let ic of ingredientXComposites;">
+									<td><div *ngFor="let ingredient of ingredients2;"><div *ngIf="ic.ingredient_id==ingredient.id">{{ingredient.name}}</div></div></td>
+									<td>{{ic.gramo}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="form-group">
+						<label>Ingredientes Compuestos</label>
+						<select name="composite_id" class="form-control" #composite_id="ngModel" [(ngModel)]="CompositeXFood.composite_id">
+							<option *ngFor="let composite of composites2;" value="{{composite.id}}">{{composite.name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Gramo</label>
+						<input type="text" name="gramo" class="form-control" #gramo="ngModel" [(ngModel)]="CompositeXFood.gramo"/>
+					</div>
+					<div  class="row">
+						<button type="button" class="btn btn-success btn-add-cart pull-right f20em" (click)="addComposites()">Agregar!	<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+						</div>
+					<br>
+					<br>
+					<div *ngIf="compositeXFoods.length>0">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>ingrediente Compuesto</th>
+									<th>gramos</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let ic of compositeXFoods;">
+									<td><div *ngFor="let composite of composites2;"><div *ngIf="ic.composite_id==composite.id">{{composite.name}}</div></div></td>
+									<td>{{ic.gramo}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div> 
+					<div  class="row">
+						<button type="submit" class="btn btn-success btn-add-cart pull-right f20em">REGISTRAR!	<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+					</div>
+					<br>
+					<br>
+				</form>				
+			</div>
+		</div>
+	</div>
+</div>
