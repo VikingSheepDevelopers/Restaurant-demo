@@ -71,12 +71,15 @@ export class MyFoodAddComponent implements OnInit {
   }
 
   public onSubmit(){
-   /* for (var i of this.ingredientXComposites) {
-      this.compositeIngredient.ingredient_x_composite.push(i.id);
-    }*/
+    for (var i of this.ingredientXComposites) {
+      this.food.ingredient_x_composite.push(i.id);
+    }
+    for (var i of this.compositeXFoods) {
+      this.food.composite_x_food.push(i.id);
+    }
     console.log(this.food);
     this._FoodService.addFood(this.food);
-    this._router.navigate(['/listCompositeIngredients']);
+    this._router.navigate(['/listFoods']);
   }
 
   public addIngredients() {
@@ -89,6 +92,12 @@ export class MyFoodAddComponent implements OnInit {
     this.m++;
     this._CompositeXFoodService.addCompositeXFood(this.CompositeXFood);
     this.compositeXFoods.push({id:this.m,composite_id:this.CompositeXFood.composite_id,gramo:this.CompositeXFood.gramo});
+  }
+
+  onChange(event) {
+    var files = event.srcElement.files;
+    this.food.img_name="assets/img/"+files[0].name;
+    console.log(files[0].name);
   }
 
 }
