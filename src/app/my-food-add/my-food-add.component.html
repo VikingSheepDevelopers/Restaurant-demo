@@ -21,6 +21,14 @@
 						<input type="text" name="descrip" class="form-control" #descrip="ngModel" [(ngModel)]="food.descrip"/>
 					</div>
 					<div class="form-group">
+						<label>Precio de creción</label>
+						<input type="number" name="price_f" class="form-control" #price_f="ngModel" [(ngModel)]="food.price_f"/>
+					</div>
+					<div class="form-group">
+						<label>Precio de venta</label>
+						<input type="number" name="price_s" class="form-control" #price_s="ngModel" [(ngModel)]="food.price_s"/>
+					</div>
+					<div class="form-group">
 						<label>Ingredientes</label>
 						<select name="ingredient_id" class="form-control" #ingredient_id="ngModel" [(ngModel)]="IngredientXComposite.ingredient_id">
 							<option *ngFor="let ingredient of ingredients2;" value="{{ingredient.id}}">{{ingredient.name}}</option>
@@ -81,7 +89,10 @@
 								</tr>
 							</tbody>
 						</table>
-					</div> 
+					</div>
+					<div class="form-group">
+						<input type="file" (change)="onChange($event)" /> 
+					</div>
 					<div  class="row">
 						<button type="submit" class="btn btn-success btn-add-cart pull-right f20em">REGISTRAR!	<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
 					</div>
