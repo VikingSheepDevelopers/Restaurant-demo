@@ -20,8 +20,8 @@
 			<td>{{customer.phone}}</td>
 			<td>{{customer.address}}</td>
 			<td>
-				<a type="button" class="btn btn-info"  href="/customerEdit/{{customer.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-				<button class="btn btn-danger" (click)="OnDelete(customer.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+				<a type="button" class="btn btn-info"  data-toggle="tooltip" title="Editar Cliente"  href="/customerEdit/{{customer.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+				<button  data-toggle="tooltip" title="Borrar Cliente" class="btn btn-danger" (click)="OnDelete(customer.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
 			</td>
 		</tr>
 	</tbody>

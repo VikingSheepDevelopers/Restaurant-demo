@@ -2,14 +2,31 @@
 <nav class="navbar navbar-inverse sidebar" role="navigation" style="height: 677px; width: 250px;">
     <div class="container-fluid dropdown no-padding">
     <br><br><br>
-	  <button class="btn btn-default dropdown-toggle btnDrop width-100 title f28em" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	    Usuarios
+	  <button class="btn btn-default dropdown-toggle btnDrop width-100 title f28em" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-user-circle-o" aria-hidden="true"></i> 
+	    Clientes
 	  </button>
 	  <ul class="dropdown-menu width-100" aria-labelledby="dropdownMenu1">
-	    <li><a href="#">Action</a></li>
-	    <li><a href="#">Another action</a></li>
-	    <li><a href="#">Something else here</a></li>
-	    <li><a href="#">Separated link</a></li>
+	    <li><a  href="/"><i class="fa fa-list-ol" aria-hidden="true"></i> Lista de Cliente</a></li>
+	    <li><a  href="/customerCreate/"><i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar Cliente</a></li>
+	  </ul>
+	</div>
+    <div class="container-fluid dropdown no-padding">
+	  <button class="btn btn-default dropdown-toggle btnDrop width-100 title f28em" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-address-card-o" aria-hidden="true"></i> 
+	    Usuarios
+	  </button>
+	  <ul class="dropdown-menu width-100" aria-labelledby="dropdownMenu2">
+	    <li><a  href="/listUsers/"><i class="fa fa-list-ol" aria-hidden="true"></i> Lista de Usuarios</a></li>
+	    <li><a  href="/userCreate/"><i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar Usuarios</a></li>
+	  </ul>
+	</div>
+    <div class="container-fluid dropdown no-padding">
+	  <button class="btn btn-default dropdown-toggle btnDrop width-100 title f28em" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	  <i class="fa fa-th" aria-hidden="true"></i>
+	    Inventario
+	  </button>
+	  <ul class="dropdown-menu width-100" aria-labelledby="dropdownMenu3">
+	    <li><a  href="/listIngredients/"><i class="fa fa-list-ol" aria-hidden="true"></i> Productos en Inventario</a></li>
+	    <li><a  href="/ingredientCreate/"><i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar a Inventario</a></li>
 	  </ul>
 	</div>
 </nav>

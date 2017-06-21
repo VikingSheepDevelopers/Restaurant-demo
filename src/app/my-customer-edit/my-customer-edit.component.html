@@ -1,37 +1,58 @@
-<div class="container-fluid">
+<br><br><br>
+<div id="MyContainer "  class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-		<br><br>
-			<h2 class="title f50em">
-				Editar Cliente!!
-			</h2>
-			<form #formCustomer="ngForm" (ngSubmit)="onSubmit()">
-				<div class="form-group">
-					<label>Nombre</label>
-					<input type="text" name="name" class="form-control" #name="ngModel" [(ngModel)]="customer.name"/>
+			<div class="bubble">
+				<div class="rectangle"><h2 class="tituloRibbon title">Registra a tu nuevo cliente</h2></div>
+				<div class="triangle-l"></div>
+				<div class="triangle-r"></div> 
+				<div class="info" style="height: 330px;">
+					<form #formCustomer="ngForm" (ngSubmit)="onSubmit()">
+						<div class="col-xs-6">
+							<div class="form-group inner-addon-lg left-addon-lg">
+								<i class="fa fa-user-circle bg-800" aria-hidden="true"></i>
+								<input type="text" name="name" class="form-control input-big" maxlength="20" placeholder=" Nombre" autocomplete="off" #name="ngModel" [(ngModel)]="customer.name"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group inner-addon-lg left-addon-lg">
+								<i class="fa fa-user-circle bg-800" aria-hidden="true"></i>
+								<input type="text" name="lastname" class="form-control input-big" maxlength="20" placeholder=" Apellido" autocomplete="off" #lastname="ngModel" [(ngModel)]="customer.lastname"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group inner-addon-lg left-addon-lg">
+								<i class="fa fa-address-card bg-800" aria-hidden="true"></i>
+								<input type="text" name="dni" class="form-control input-big" maxlength="20" placeholder=" DNI" autocomplete="off"  #dni="ngModel" [(ngModel)]="customer.dni"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group inner-addon-lg left-addon-lg">
+								<i class="fa fa-envelope-o bg-800" aria-hidden="true"></i>
+								<input type="text" name="email" class="form-control input-big" maxlength="20" placeholder=" Email" autocomplete="off" #email="ngModel" [(ngModel)]="customer.email"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group inner-addon-lg left-addon-lg">
+								<i class="fa fa-mobile bg-800" aria-hidden="true"></i>
+								<input type="text" name="phone" class="form-control input-big" maxlength="20" placeholder=" Numero Telefonico" autocomplete="off" #phone="ngModel" [(ngModel)]="customer.phone"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group inner-addon-lg left-addon-lg">
+								<i class="fa fa-map bg-800" aria-hidden="true"></i>
+								<input type="text" name="address" class="form-control input-big" maxlength="20" placeholder=" Direccion" autocomplete="off" #address="ngModel" [(ngModel)]="customer.address"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<a type="button" class="btn btn-action btn-add-cart f20em width-100" href="/"><i class="fa fa-caret-left"></i> VOLVER</a>
+						</div>
+						<div class="col-xs-6">
+							<button type="submit" class="btn btn-success btn-add-cart f20em"><i class="fa fa-floppy-o" aria-hidden="true"></i> GUARDAR!</button>
+						</div>
+					</form>		
 				</div>
-				<div class="form-group">
-					<label>Apellido</label>
-					<input type="text" name="lastname" class="form-control" #lastname="ngModel" [(ngModel)]="customer.lastname"/>
-				</div>
-				<div class="form-group">
-					<label>DNI</label>
-					<input type="text" name="dni" class="form-control" #dni="ngModel" [(ngModel)]="customer.dni"/>
-				</div>
-				<div class="form-group">
-					<label>Correo</label>
-					<input type="email" name="email" class="form-control" #email="ngModel" [(ngModel)]="customer.email"/>
-				</div>
-				<div class="form-group">
-					<label>Telefono</label>
-					<input type="text" name="phone" class="form-control" #phone="ngModel" [(ngModel)]="customer.phone"/>
-				</div>
-				<div class="form-group">
-					<label>Direccion</label>
-					<input type="text" name="address" class="form-control" #address="ngModel" [(ngModel)]="customer.address"/>
-				</div>
-				<input class="btn btn-success pull-right" type="submit" value="Registrar">
-			</form>	
+			</div>			
 		</div>
 	</div>
 </div>
