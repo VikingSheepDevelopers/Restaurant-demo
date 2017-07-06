@@ -9,6 +9,7 @@ import {CustomerService} from '../services/customer.service';
 })
 export class MyCustomerComponent implements OnInit {
 public title:string;
+public show: boolean = false;
 public customers:Customer;
   constructor(private _customerService:CustomerService) 
   { 
@@ -23,6 +24,13 @@ public customers:Customer;
   OnDelete(id){
     this._customerService.deleteCustomer(id);
     this.customers=this._customerService.getCustomers();
+  }
+  ChangeShow(){
+    if(this.show) {
+      this.show = false;
+    }else{
+      this.show = true;
+    }
   }
 
 }
