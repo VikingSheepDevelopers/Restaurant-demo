@@ -10,9 +10,9 @@
 			<div class="col-xs-2">
 				<a type="button" class="btn btn-action"  data-toggle="tooltip" title="Editar Cliente"  href="/customerEdit/{{customer.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 				<button  data-toggle="tooltip" title="Borrar Cliente" class="btn btn-action" (click)="OnDelete(customer.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-				<button  data-toggle="tooltip" title="Detalle Cliente" class="btn btn-action" (click)="ChangeShow()"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+				<button  data-toggle="tooltip" title="Detalle Cliente" class="btn btn-action" (click)="ChangeShow(customer.id)"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
 			</div>
-			<div class="col-xs-12" *ngIf="show" id="customer_{{customer.id}}" >
+			<div class="col-xs-12" *ngIf="show==customer.id" id="customer_{{customer.id}}" >
 				<div class="container-fluid">
 					<hr/>
 					<h4>Detalles del Cliente:</h4>
@@ -28,10 +28,10 @@
 						</div>
 						<div class="col-xs-12">
 							<p class="f20em"><i class="fa fa-map bg-800" aria-hidden="true"></i>  Address:{{customer.address}}</p>
-						</div>	
-					</div>					
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 </div>

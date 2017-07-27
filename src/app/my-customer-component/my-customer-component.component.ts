@@ -11,26 +11,22 @@ export class MyCustomerComponent implements OnInit {
 public title:string;
 public show: boolean = false;
 public customers:Customer;
-  constructor(private _customerService:CustomerService) 
-  { 
+  constructor(private _customerService:CustomerService)
+  {
   	this.title="Lista de Clientes"
   	this.customers=this._customerService.getCustomers();
   }
 
   ngOnInit() {
-  	
+
   }
 
   OnDelete(id){
     this._customerService.deleteCustomer(id);
     this.customers=this._customerService.getCustomers();
   }
-  ChangeShow(){
-    if(this.show) {
-      this.show = false;
-    }else{
-      this.show = true;
-    }
+  ChangeShow($id){
+    this.show=$id;
   }
 
 }
